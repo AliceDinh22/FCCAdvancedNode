@@ -9,7 +9,7 @@ html
   body
     h1= title
     p= message
-    
+
     h1.border.center FCC Advanced Node and Express
     h2.center#pug-success-message
     | Looks like this page is being rendered from Pug into HTML!
@@ -17,35 +17,3 @@ html
     p#pug-variable=message
     
     
-    
-    if showLogin
-      hr
-      h2.center Login Form
-      form(action='/login', method='post').center
-        div
-          label Username:
-          input(type='text', name='username')
-        div
-          label Password:
-          input(type='password', name='password')
-        div
-          input(type='submit', value='Log In')
-          
-    if showRegistration
-      hr
-      h2.center Registration Form
-      form(action='/register', method='post').center
-        div
-          label Username:
-          input(type='text', name='username')
-        div
-          label Password:
-          input(type='password', name='password')
-        div
-          input(type='submit', value='Register')
-
-    if showSocialAuth
-      hr
-      h2.center Social Login
-      .login.center
-        a(href='/auth/github').text Login with Github!
