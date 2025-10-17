@@ -1,6 +1,5 @@
 "use strict";
 require("dotenv").config();
-console.log("SESSION_SECRET:", process.env.SESSION_SECRET ? "Loaded ✅" : "Not found ❌");
 const express = require("express");
 const myDB = require("./connection");
 const fccTesting = require("./freeCodeCamp/fcctesting.js");
