@@ -14,15 +14,13 @@ app.use("/public", express.static(process.cwd() + "/public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.set("view engine", "pug");
